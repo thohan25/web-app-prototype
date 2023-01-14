@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things Catalog</title>
+
+    <!-- Materialize CSS and Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <style>
+        form {
+            border: solid 2px rgb(185, 158, 189);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        form:focus-within {
+            border-color: rgb(106, 64, 107);
+        }
+
+        tr:hover {
+            background-color: #ddbfda;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Actual page content! -->
+    <div class="container">
+        <div class="section flow-text" id="stuffDetail">
+            <h1>Stuff details:</h1>
+            <a class="btn-small waves-effect waves-light" href="things.html">
+                <i class="material-icons left">arrow_back</i>Return to Catalog
+            </a>
+            <table>
+                <tr>
+                    <th>Item:</th>
+                    <td>Plumbuses</td>
+                </tr>
+                <tr>
+                    <th>Quantity:</th>
+                    <td>-6</td>
+
+                </tr>
+                <tr>
+                    <th>Popularity:</th>
+                    <td>∞</td>
+
+                </tr>
+                <tr>
+                    <th>Splorg Rating:</th>
+                    <td>Ψ</td>
+
+                </tr>
+                <tr>
+                    <th>Description:</th>
+                    <td>
+                        In order to make the common household item known as a plumbus, you first have to cut the dinglebop. Next, you smooth out the dinglebop with a bunch of shleem, which eventually gets repurposed for later batches.
+
+                        You then must take the dinglebop and push it through the krumbo. Once it has crossed over to the other side of the krumbo, you must rub a fleeb against it to create fleeb juice.
+
+                        The next step, and this is crucial, is that a shlami shows up and rubs the dinglebop and then spits on it. Finally, the ploobus and krumbo are shaved away, and boom, you have a plumbus. 
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" id="stuffControls">
+            <a class="btn-large waves-effect waves-light orange left modal-trigger" href="#stuffEdit">
+                <i class="material-icons right">edit</i>
+                Edit
+            </a>
+            <a class="btn-large waves-effect waves-light red right">
+                <i class="material-icons right">delete</i>
+                Delete
+            </a>
+        </div>
+
+
+        <div class="modal" id="stuffEdit">
+
+            <div class="modal-content">
+
+                <h2>Edit thing:</h2>
+                <form>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <label for="nameInput">Thing Name:</label>
+                            <input type="text" name="name" id="nameInput" class="validate" data-length="32" required>
+                        </div>
+                        <div class="input-field col s6">
+                            <label for="quantityInput">Thing Quantity:</label>
+                            <input type="number" name="quantity" id="quantityInput" value=1 required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <label for="descriptionInput">Thing Popularity:</label>
+                            <input type="text" name="description" id="descriptionInput" data-length="100">
+                        </div>
+                        <div class="input-field col s6">
+                            <label for="descriptionInput">Splorg Rating:</label>
+                            <input type="text" name="description" id="descriptionInput" data-length="100">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <label for="descriptionInput">Thing Description:</label>
+                            <input type="text" name="description" id="descriptionInput" data-length="100">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn waves-effect waves-light " type="submit">
+                            <i class="material-icons right">send</i>
+                            Submit
+                        </button>
+                        <button class="modal-close waves-effect waves-green btn-flat">Nah</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- initialize Materialize elements -->
+    <script> M.AutoInit();</script>
+
+</body>
+
+</html>
