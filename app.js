@@ -17,12 +17,24 @@ app.get( "/", ( req, res ) => {
 
 // define a route for the things inventory page
 app.get( "/things", ( req, res ) => {
-    res.sendFile( __dirname + "/views/things.html" );
+    db.execute('SELECT id, item, quantity FROM things', (error, results) => {
+        if (error) {
+            res.status(500).send(error);
+        } else {
+            res.send(results);
+        }
+    })
 } );
 
 // define a route for the item detail page
 app.get( "/things/item", ( req, res ) => {
-    res.sendFile( __dirname + "/views/item.html" );
+    db.execute('SELECT id, item, quantity FROM things WHERE id = 0', (error, results) => {
+        if (error) {
+            res.status(500).send(error);
+        } else {
+            res.send(results[0]);
+        }
+    })
 } );
 
 // start the server
