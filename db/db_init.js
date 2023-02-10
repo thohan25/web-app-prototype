@@ -38,14 +38,14 @@ db.execute(insert_things_table_sql, ['Thingamabob', '54321', 'Not to be confused
 
 /**** Read the sample items inserted ****/
 
-const read_stuff_table_sql = "SELECT * FROM stuff";
+const read_things_table_sql = "SELECT * FROM things";
 
-db.execute(read_stuff_table_sql, 
+db.execute(read_things_table_sql, 
     (error, results) => {
         if (error) 
             throw error;
 
-        console.log("Table 'stuff' initialized with:")
+        console.log("Table 'things' initialized with:")
         console.log(results);
     }
 );

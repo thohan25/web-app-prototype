@@ -1,6 +1,7 @@
 //set up the server
 const express = require( "express" );
 const logger = require("morgan");
+const db = require("./db_connection");
 const app = express();
 const port = 8080;
 
